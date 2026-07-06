@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/Brandi/Downloads/Synfinite_Labs_Vision_Board_Timeline.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Synfinite Labs × mg Magazine — Vision Board &amp; Campaign Timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Synfinite Labs × mg Magazine — Vision Board &amp; Campaign Timeline_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a0a0d;
+    --bg-panel: #111116;
+    --bg-panel-2: #17171d;
+    --ink: #f3f2ef;
+    --ink-dim: #9b9aa3;
+    --line: #2a2a32;
+    --violet: #8b7cf0;
+    --teal: #49d6c4;
+    --amber: #f0aa63;
+    --rose: #e2678e;
+    --spectrum: linear-gradient(90deg, var(--violet), var(--teal) 33%, var(--amber) 66%, var(--rose));
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height:1.5;
+  }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding: 0 40px; }
+
+  /* ---------- background atmosphere ---------- */
+  .atmosphere{
+    position:relative;
+    overflow:hidden;
+  }
+  .atmosphere::before{
+    content:"";
+    position:absolute; inset:-20% -10% auto -10%;
+    height:620px;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(139,124,240,0.16), transparent 55%),
+      radial-gradient(circle at 75% 20%, rgba(73,214,196,0.13), transparent 50%),
+      radial-gradient(circle at 50% 60%, rgba(240,170,99,0.10), transparent 55%);
+    pointer-events:none;
+  }
+
+  /* ---------- hero ---------- */
+  header.hero{ padding: 88px 0 64px; position:relative; }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color: var(--ink-dim);
+    display:flex; align-items:center; gap:14px;
+    margin-bottom: 28px;
+  }
+  .eyebrow .dot{ width:6px; height:6px; border-radius:50%; background: var(--teal); }
+  .brandline{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:500;
+    font-size:15px;
+    color: var(--ink-dim);
+  }
+  .brandline b{ color: var(--ink); font-weight:600; }
+
+  h1.title{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size: clamp(38px, 5.4vw, 64px);
+    line-height:1.04;
+    letter-spacing:-0.01em;
+    margin: 0 0 22px;
+    max-width: 820px;
+  }
+  h1.title .grad{
+    background: var(--spectrum);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  p.lede{
+    font-size:18px;
+    color: var(--ink-dim);
+    max-width: 600px;
+    margin: 0 0 6px;
+  }
+  p.tagline{
+    font-style:italic;
+    color: var(--ink-dim);
+    font-size:14px;
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    max-width: 600px;
+  }
+
+  /* signature spectral wave divider */
+  .wave-divider{ width:100%; height:64px; margin: 8px 0 0; }
+
+  /* ---------- section headings ---------- */
+  section{ padding: 58px 0; }
+  .section-head{ margin-bottom: 40px; }
+  .section-eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color: var(--teal);
+    margin-bottom:10px;
+  }
+  h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight:600;
+    margin: 0 0 10px;
+  }
+  .section-sub{ color: var(--ink-dim); max-width: 620px; font-size:15px; }
+
+  /* ---------- vision board grid ---------- */
+  .board{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow:hidden;
+  }
+  .card{
+    background: var(--bg-panel);
+    padding: 30px 26px 32px;
+    min-height: 260px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position:relative;
+    transition: background 0.25s ease;
+  }
+  .card:hover{ background: var(--bg-panel-2); }
+  .card-index{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color: var(--ink-dim);
+    letter-spacing:0.1em;
+  }
+  .card-glyph{ width:44px; height:44px; margin: 18px 0 20px; }
+  .card h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:17px;
+    font-weight:600;
+    margin: 0 0 10px;
+    line-height:1.25;
+  }
+  .card p{ font-size:13.5px; color: var(--ink-dim); margin:0; }
+
+  /* ---------- timeline ---------- */
+  .timeline{ position:relative; padding-left: 4px; }
+  .timeline-track{
+    position:absolute;
+    left: 27px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--line);
+  }
+  .timeline-track::after{
+    content:"";
+    position:absolute;
+    left:0; top:0; width:100%; height: 100%;
+    background: linear-gradient(180deg, var(--violet), var(--teal) 40%, var(--amber) 75%, var(--rose));
+    opacity:0.9;
+  }
+  .t-item{
+    position:relative;
+    display:grid;
+    grid-template-columns: 56px 1fr;
+    gap: 26px;
+    padding-bottom: 40px;
+  }
+  .t-item:last-child{ padding-bottom:0; }
+  .t-node{
+    width:14px; height:14px; border-radius:50%;
+    background: var(--bg);
+    border: 2px solid var(--teal);
+    margin-left: 21px;
+    margin-top: 6px;
+    z-index:1;
+  }
+  .t-item.milestone .t-node{ background: var(--amber); border-color: var(--amber); box-shadow: 0 0 0 4px rgba(240,170,99,0.15); }
+  .t-body{
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .t-when{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: var(--teal);
+    margin-bottom:8px;
+  }
+  .t-item.milestone .t-when{ color: var(--amber); }
+  .t-title{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:17px;
+    font-weight:600;
+    margin: 0 0 8px;
+  }
+  .t-desc{ font-size: 13.5px; color: var(--ink-dim); margin:0; }
+  .t-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top: 12px; }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    color: var(--ink-dim);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+
+  /* ---------- gantt swimlanes ---------- */
+  .gantt{ margin-top: 8px; }
+  .gantt-scale{
+    position:relative;
+    height: 26px;
+    margin-left: 132px;
+    margin-bottom: 6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-dim);
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--line);
+  }
+  .gantt-scale span{ position:absolute; bottom: 8px; transform: translateX(-2px); }
+  .gantt-row{
+    display:grid;
+    grid-template-columns: 132px 1fr;
+    align-items:center;
+    gap: 0;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .gantt-row:last-child{ border-bottom:none; }
+  .gantt-label{ padding-right: 16px; }
+  .gantt-label .gl-name{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+  .gantt-label .gl-topic{
+    font-size: 11.5px;
+    color: var(--ink-dim);
+    line-height:1.35;
+  }
+  .gantt-track{
+    position:relative;
+    height: 34px;
+    background:
+      linear-gradient(90deg, transparent 0, transparent 22.1%, var(--line) 22.1%, var(--line) calc(22.1% + 1px), transparent calc(22.1% + 1px)),
+      linear-gradient(90deg, transparent 0, transparent 43.6%, var(--line) 43.6%, var(--line) calc(43.6% + 1px), transparent calc(43.6% + 1px)),
+      linear-gradient(90deg, transparent 0, transparent 65.7%, var(--line) 65.7%, var(--line) calc(65.7% + 1px), transparent calc(65.7% + 1px)),
+      linear-gradient(90deg, transparent 0, transparent 87.1%, var(--line) 87.1%, var(--line) calc(87.1% + 1px), transparent calc(87.1% + 1px));
+  }
+  .g-seg{
+    position:absolute;
+    top: 9px;
+    height: 16px;
+    border-radius: 8px;
+  }
+  .g-seg.pre{ opacity: 0.35; }
+  .g-seg.post{ opacity: 0.55; }
+  .g-live{
+    position:absolute;
+    top: 5px;
+    width: 24px; height: 24px;
+    transform: translateX(-12px) rotate(45deg);
+    border-radius: 4px;
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+  .gantt-legend{
+    display:flex; gap: 22px; flex-wrap:wrap;
+    margin-top: 18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-dim);
+  }
+  .gantt-legend .lg-item{ display:flex; align-items:center; gap: 8px; }
+  .lg-swatch{ width: 12px; height: 12px; border-radius: 3px; }
+  .lg-swatch.pre{ opacity:0.45; }
+  .lg-swatch.live{ transform: rotate(45deg); border-radius: 2px; }
+
+  @media (max-width: 700px){
+    .gantt-scale{ margin-left: 0; }
+    .gantt-row{ grid-template-columns: 1fr; }
+    .gantt-label{ padding-bottom: 10px; }
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top: 1px solid var(--line);
+    padding: 34px 0 46px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  footer .f-left{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:14px;
+    color: var(--ink-dim);
+  }
+  footer .f-left b{ color: var(--ink); }
+  footer .f-right{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color: var(--ink-dim);
+  }
+
+  @media (max-width: 900px){
+    .board{ grid-template-columns: repeat(2, 1fr); }
+    .wrap{ padding: 0 22px; }
+  }
+  @media (max-width: 560px){
+    .board{ grid-template-columns: 1fr; }
+    .t-item{ grid-template-columns: 30px 1fr; gap: 14px; }
+    .t-node{ margin-left: 12px; }
+    .timeline-track{ left: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="atmosphere">
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow"><span class="dot"></span>SYNFINITE LABS <span style="opacity:0.5">×</span> MG MAGAZINE</div>
+      <h1 class="title">Vision Board &amp; <span class="grad">Campaign Timeline</span></h1>
+      <p class="lede">The Authority &amp; Discoverability Program, visualized — how the rebrand narrative takes shape across mg Magazine, and how the August–October webinar rollout gets there.</p>
+      <p class="tagline">Designed for discoverability. Engineered for decision-making.</p>
+    </header>
+
+    <!-- signature spectral wave -->
+    <svg class="wave-divider" viewBox="0 0 1180 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <lineargradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#8b7cf0"></stop>
+          <stop offset="33%" stop-color="#49d6c4"></stop>
+          <stop offset="66%" stop-color="#f0aa63"></stop>
+          <stop offset="100%" stop-color="#e2678e"></stop>
+        </lineargradient>
+      </defs>
+      <path d="M0,32 C120,4 180,60 300,32 C420,4 480,60 600,32 C720,4 780,60 900,32 C1020,4 1080,60 1180,32" fill="none" stroke="url(#waveGrad)" stroke-width="2" stroke-linecap="round" opacity="0.85"></path>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ VISION BOARD ============ -->
+  <section id="vision">
+    <div class="section-head">
+      <div class="section-eyebrow">The Narrative</div>
+      <h2>What the market should come away believing</h2>
+      <p class="section-sub">From <em>The Terpene Store</em> to Synfinite Labs: a formulation and innovation-led identity. Four pillars anchor every asset in the program.</p>
+    </div>
+
+    <div class="board">
+
+      <div class="card">
+        <div class="card-index">01</div>
+        <svg class="card-glyph" viewBox="0 0 44 44"><circle cx="22" cy="22" r="16" fill="none" stroke="#8b7cf0" stroke-width="2" opacity="0.7"></circle><circle cx="22" cy="22" r="8" fill="#8b7cf0" opacity="0.35"></circle></svg>
+        <div>
+          <h3>Category Authority</h3>
+          <p>Defines how the market understands Synfinite Labs — the formulation partner of record, not just a terpene supplier.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-index">02</div>
+        <svg class="card-glyph" viewBox="0 0 44 44"><path d="M6 30 L14 14 L22 26 L30 10 L38 30" fill="none" stroke="#49d6c4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <div>
+          <h3>Third-Party Credibility</h3>
+          <p>Independent editorial validation from mg Magazine — the kind operators trust more than a pitch deck.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-index">03</div>
+        <svg class="card-glyph" viewBox="0 0 44 44"><rect x="7" y="7" width="30" height="30" rx="6" fill="none" stroke="#f0aa63" stroke-width="2"></rect><circle cx="22" cy="22" r="4" fill="#f0aa63"></circle></svg>
+        <div>
+          <h3>Search + AI Discoverability</h3>
+          <p>Structured, indexed content that surfaces wherever buyers — and the models they now query — go looking.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-index">04</div>
+        <svg class="card-glyph" viewBox="0 0 44 44"><path d="M8 34 Q22 6 36 34" fill="none" stroke="#e2678e" stroke-width="2.2" stroke-linecap="round"></path><circle cx="8" cy="34" r="2.6" fill="#e2678e"></circle><circle cx="36" cy="34" r="2.6" fill="#e2678e"></circle></svg>
+        <div>
+          <h3>PR-to-Equity Conversion</h3>
+          <p>Turns PR visibility and sampling-driven curiosity into durable, compounding brand equity — not one-off attention.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section id="timeline">
+    <div class="section-head">
+      <div class="section-eyebrow">The Rollout</div>
+      <h2>Campaign timeline — three webinars, one per month, September–November</h2>
+      <p class="section-sub">Each webinar runs the same cycle: 30 days of pre-promotion, a live host event, then 30 days of on-demand access with rolling lead delivery — one webinar hosted each month in September, October, and November, so a new cycle is always starting as the previous one winds down. Branded content publishes alongside the September and November webinars: an editorial interview, e-newsletter inclusion, and an AI-optimized landing page. <em>Dates below are planning estimates pending final scheduling.</em></p>
+    </div>
+
+    <div class="gantt">
+      <div class="gantt-scale">
+        <span style="left:0%">AUG 1</span>
+        <span style="left:22.1%">SEP 1</span>
+        <span style="left:43.6%">OCT 1</span>
+        <span style="left:65.7%">NOV 1</span>
+        <span style="left:87.1%">DEC 1</span>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">
+          <div class="gl-name">Webinar I — September</div>
+          <div class="gl-topic">Building Better Products Through Formulation: Consistency at Scale</div>
+        </div>
+        <div class="gantt-track">
+          <div class="g-seg pre" style="left:10.7%; width:21.4%; background:var(--violet);"></div>
+          <div class="g-seg post" style="left:32.1%; width:21.4%; background:var(--violet);"></div>
+          <div class="g-live" style="left:32.1%; background:var(--violet);"></div>
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">
+          <div class="gl-name">Branded Content</div>
+          <div class="gl-topic">Editorial interview · e-newsletter · AI-optimized page</div>
+        </div>
+        <div class="gantt-track">
+          <div class="g-seg post" style="left:34.3%; width:7.1%; background:var(--rose);"></div>
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">
+          <div class="gl-name">Webinar II — October</div>
+          <div class="gl-topic">From Sample to Scale: Turning Trial Into Long-Term Success</div>
+        </div>
+        <div class="gantt-track">
+          <div class="g-seg pre" style="left:32.1%; width:21.4%; background:var(--teal);"></div>
+          <div class="g-seg post" style="left:53.6%; width:21.4%; background:var(--teal);"></div>
+          <div class="g-live" style="left:53.6%; background:var(--teal);"></div>
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">
+          <div class="gl-name">Webinar III — November</div>
+          <div class="gl-topic">Topic TBD — slot in the confirmed title when set</div>
+        </div>
+        <div class="gantt-track">
+          <div class="g-seg pre" style="left:54.3%; width:21.4%; background:var(--amber);"></div>
+          <div class="g-seg post" style="left:75.7%; width:21.4%; background:var(--amber);"></div>
+          <div class="g-live" style="left:75.7%; background:var(--amber);"></div>
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">
+          <div class="gl-name">Branded Content</div>
+          <div class="gl-topic">Editorial interview · e-newsletter · AI-optimized page</div>
+        </div>
+        <div class="gantt-track">
+          <div class="g-seg post" style="left:77.1%; width:7.1%; background:var(--rose);"></div>
+        </div>
+      </div>
+
+      <div class="gantt-legend">
+        <div class="lg-item"><span class="lg-swatch pre" style="background:var(--ink-dim);"></span>Pre-promotion (30 days) — banners, e-newsletter, landing page</div>
+        <div class="lg-item"><span class="lg-swatch live" style="background:var(--ink-dim);"></span>Live host event</div>
+        <div class="lg-item"><span class="lg-swatch" style="background:var(--ink-dim); opacity:0.6;"></span>On-demand + lead delivery (30 days)</div>
+        <div class="lg-item"><span class="lg-swatch" style="background:var(--rose); opacity:0.7;"></span>Branded content publish window</div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:44px;">
+      <div class="section-eyebrow">Behind Every Lane</div>
+      <h2>What's happening in each phase</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-track"></div>
+
+      <div class="t-item">
+        <div class="t-node"></div>
+        <div class="t-body">
+          <div class="t-when">30 Days Pre-Event</div>
+          <div class="t-title">Pre-Promotion</div>
+          <p class="t-desc">Banner placements, e-newsletter inclusion, and an SEO &amp; AI-indexed landing page build registration ahead of each webinar's live date.</p>
+          <div class="t-tags"><span class="tag">Banners</span><span class="tag">E-newsletter</span><span class="tag">Landing page</span></div>
+        </div>
+      </div>
+
+      <div class="t-item milestone">
+        <div class="t-node"></div>
+        <div class="t-body">
+          <div class="t-when">Live Date · Sept / Oct / Nov</div>
+          <div class="t-title">Live Host Event</div>
+          <p class="t-desc">Each webinar streams live, capturing registration and real-time engagement data.</p>
+          <div class="t-tags"><span class="tag">Live event</span><span class="tag">Engagement data</span></div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-node"></div>
+        <div class="t-body">
+          <div class="t-when">30 Days Post-Event</div>
+          <div class="t-title">On-Demand + Lead Delivery</div>
+          <p class="t-desc">Replay stays available for 30 days. Qualified leads are delivered to Synfinite on a rolling basis, with performance reporting through the window.</p>
+          <div class="t-tags"><span class="tag">30-day on-demand</span><span class="tag">Lead delivery</span><span class="tag">Reporting</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-left"><b>Synfinite Labs</b> · Authority &amp; Discoverability Program</div>
+    <div class="f-right">mg Magazine · mgmagazine.com · brandi@inc-media.com</div>
+  </footer>
+
+</div>
+
+
+
+</body></html>
